@@ -124,12 +124,14 @@ model = KerasClassifier(build_fn=model_build, verbose=0)
 
 ```python
 params_grid = {
-    option1 = [1,2,3],
-    option2 = [1,2,3],
-    option3 = [1,2,3],
-    option4 = [1,2,3],
+    "option1" = [1,2,3],
+    "option2" = [1,2,3],
+    "option3" = [1,2,3],
+    "option4" = [1,2,3],
 }
 ```
+
+- 튜플형으로 생성해야한다.
 
 ### 그리드 서치 실행
 
@@ -145,6 +147,9 @@ grid_search = GridSearchCV(
 
 grid_results = grid_search.fit(X_train, y_train)
 ```
+
+- verbose 옵션은 0: 실행 중간 결과 미출력, 1: 실행 중간 결과 출력, 2: 상세 중간 결과 출력한다.
+- n_jobs 옵션은 학습에 사용할 CPU 코어 개수를 의미한다. -1을 넣으면 사용 가능한 만큼 사용한다.
 
 ### 최적의 모델의 매개변수 확인
 
