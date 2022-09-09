@@ -60,6 +60,7 @@ import sklearn.preprocessing as scalers
 
 ScaleType = scalers.MinMaxScaler() # 최대최소 스케일러
 ScaleType = scalers.StandardScaler() # 표준화 스케일러
+X = X.to_numpy()
 X_scale = ScaleType.fit_transform(X)
 ```
 
