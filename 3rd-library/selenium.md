@@ -34,7 +34,7 @@ now_chrome_version = chromedriver_autoinstaller.get_chrome_version()
 version = now_chrome_version.split(".")[0]
 
 # 해당 크롬 버전의 폴더 안에 드라이버가 설치되므로 그 위치를 저장한다.
-save_path = f'./{ver}/chromedriver.exe'
+save_path = f'./{version}/chromedriver.exe'
 
 # 크롬 드라이버의 최신버전을 설치한다.
 chromedriver_autoinstaller.install(1)
@@ -50,7 +50,7 @@ options.add_argument('headless')    # 웹 화면을 표시하지 않고 드라�
 address = '크롤링할 웹페이지 주소'
 
 # 드라이버 exe 파일의 위치
-driver = webdriver.Chrome(path, option=options) # 옵션이 없을 경우 option 속성 x
+driver = webdriver.Chrome(save_path, option=options) # 옵션이 없을 경우 option 속성 x
 
 driver.maximize_window() # 웹 최대화
 driver.minimize_window() # 웹 최소화
