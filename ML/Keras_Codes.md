@@ -85,7 +85,7 @@ from sklearn.model_selection import train_test_split
 
 data_split = 0.2
 X_train, X_val, y_train, y_val = train_test_split(X, y, stratify=y, test_size=data_split)
-X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, stratify=y_train, test_sizedata_split)
+X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, stratify=y_train, test_size = data_split)
 ```
 
 - 훈련 데이터와 테스트 데이터 이외의 검증 데이터(val_data)를 생성해 모델의 범용성을 높인다.
@@ -101,7 +101,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras import optimizers
 
-def model_build({option1, option2, option3, option4}):
+def model_build(option1, option2, option3, option4):
     model = Sequential()
     model.add()
     model.compile()
@@ -125,10 +125,10 @@ model = KerasClassifier(build_fn=model_build, verbose=0)
 
 ```python
 params_grid = {
-    "option1" = [1,2,3],
-    "option2" = [1,2,3],
-    "option3" = [1,2,3],
-    "option4" = [1,2,3],
+    "option1" : [1,2,3],
+    "option2" : [1,2,3],
+    "option3" : [1,2,3],
+    "option4" : [1,2,3],
 }
 ```
 
