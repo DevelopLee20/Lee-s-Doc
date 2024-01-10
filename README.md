@@ -7,3 +7,4 @@
 5. [크롤링 및 매크로 (selenium feat. chromedriver, pyclip)](./3rd-library/selenium.md)
 6. [경고문 제거 라이브러리(warnings)](./3rd-library/warnings.md)
 7. [github 명령어 모음집 및 오류 해결(github)](./github/Git_orders.md)
+8. [yolo v5 학습시키기(yolo)](./deep-i/yolo_train.md)
