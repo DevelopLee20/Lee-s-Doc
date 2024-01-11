@@ -238,3 +238,37 @@ yolov5x.pt
 ```
 
 - 아래로 갈수록 무거운 모델이지만, 가장 빠르고 추천하는 모델은 yolov5s 모델이다.
+
+## 학습 결과 exp 폴더 분석
+
+```text
+- exp
+	- weight
+		- best.pt (최고점수의 매개변수 결과)
+		- last.pt (학습 마지막의 매개변수 결과)
+	- confusion_matrix.png (혼동행렬 그림, TP TN FP FN)
+	- events.out.tfevents.{code} (yolo 학습시 출력되는 로그)
+	- F1_curve.png (혼동 행렬의 F1 score, confidence 그래프, F1 이란 정밀도와 재현율의 적절한 값)
+	- hyp.yaml (학습에 쓰인 하이퍼 파라미터, Hyper Parameter)
+	- labels_correlogram.jpg (각 입력 값들의 상관관계 분석 그래프)
+	- labels.jpg
+	- opt.yaml (학습에 쓰인 options 목록, 하이퍼 파라미터도 포함되어있음)
+	- P_curve.png (precision, confidence 그래프)
+	- PR_curve.png (precision, recall 그래프)
+	- R_curve.png( recall, confidence 그래프)
+	- results.csv (에포치당 verbose 수치)
+	- results.png (에포치당 verbose 그래프)
+	- train_batch0.jpg (훈련데이터 첫번째 배치 detecting 결과)
+	- train_batch1.jpg (훈련데이터 두번째 배치 detecting 결과)
+	- train_batch2.jpg (훈련데이터 세번째 배치 detecting 결과)
+	- val_batch0_labels.jpg (검증 데이터 첫번째 배치 라벨)
+	- val_batch0_pred.jpg (검증 데이터 첫번째 배치 예측)
+	- val_batch1_labels.jpg (검증 데이터 두번째 배치 라벨)
+	- val_batch1_pred.jpg (검증 데이터 두번째 배치 예측)
+	- val_batch2_labels.jpg (검증 데이터 세번째 배치 라벨)
+	- val_batch2_pred.jpg (검증 데이터 세번째 배치 예측)
+
+confidence(정밀도): 모델이 True 라 예측한 것 중 실제 True 인 것의 비율
+recall(재현율): 실제 True 인 것 중 예측이 True인 것의 비율
+precision(예측율): 실제 정답율
+```
