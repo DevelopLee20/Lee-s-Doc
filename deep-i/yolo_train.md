@@ -272,3 +272,41 @@ confidence(정밀도): 모델이 True 라 예측한 것 중 실제 True 인 것�
 recall(재현율): 실제 True 인 것 중 예측이 True인 것의 비율
 precision(예측율): 실제 정답율
 ```
+
+## 학습된 가중치(weights)로 detect 하기
+
+```powershell
+python detect.py --weights {가중치 .pt 파일위치}
+```
+
+- 추가로 옵션을 추가해주면 된다.
+
+```python
+--weights           # 가중치 모델 설정(.pt)
+--source            # 웹캠으로 진행할 경우 설정
+--data              # 사용한 .yaml 파일 위치
+--imgsz             # 입력 이미지 사이즈 지정
+--conf-thres        # confidence 임계점 지정
+--iou-thres         # NMS IoU 임계점 지정
+--max-det           # 이미지당 최대 detect 개수
+--device            # cuda 또는 cpu 사용 정의
+--view-img          # 결과를 보일지 적용
+--save-txt          # 결과를 txt로 저장
+--save-csv          # 결과를 csv 포멧으로 저장
+--save-conf         # confidence를 .txt 형식으로 라벨 저장
+--save-crop         # 예측된 박스를 자르기
+--nosave            # 이미지나 비디오 결과를 저장하지 않음
+--classes           # 라벨을 몇 개까지 detect 할지 결정
+--agnostic-nms      # class agnostic nms 활성화
+--augment           # 추론 과정에서 증강 기법을 사용할지 여부
+--visualize         # 눈에 보이는 특징
+--update            # 모델을 업데이트할지
+--project           # 결과를 project/name 으로 저장, 기본 rus/detect
+--name              # 결과를 project/name 폴더에 저장, 기본 exp 폴더
+--exist-ok          # 폴더가 이미 존재할 때, 증가하지 않음
+--line-thickness    # detect 사각형의 두께를 지정
+--hide-conf         # 확률 출력을 표시하지 않음
+--half              # FP16 정밀도를 사용해 가속화 진행
+--dnn               # opencv DNN 사용해 ONNM 모델 추론
+--vid-stride        # 비디오 프레임 rate 지정
+```
