@@ -273,6 +273,8 @@ recall(재현율): 실제 True 인 것 중 예측이 True인 것의 비율
 precision(예측율): 실제 정답율
 ```
 
+---
+
 ## 학습된 가중치(weights)로 detect 하기
 
 ```powershell
